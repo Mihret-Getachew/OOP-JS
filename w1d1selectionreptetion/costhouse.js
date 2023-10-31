@@ -1,3 +1,5 @@
+import promptSync from "prompt-sync";
+const prompt = promptSync();
 let costofhouse = prompt("enter cost of house");
 let downPayment = 0;
 if (costofhouse == 0 && costofhouse < 50000) {

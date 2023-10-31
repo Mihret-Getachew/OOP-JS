@@ -1,3 +1,6 @@
+import promptSync from "prompt-sync";
+const prompt = promptSync();
+let num = Number(prompt("enter num"));
 let sum = 0;
 while (num > 0) {
   sum += num % 10;
