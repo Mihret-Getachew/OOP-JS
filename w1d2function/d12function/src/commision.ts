@@ -1,5 +1,8 @@
 // question 1
-function calcuate(isSalaried, amount) {
+export function computeSalesCommission(
+  isSalaried: boolean,
+  amount: number
+): number {
   let commission = 0;
 
   if (isSalaried === true) {

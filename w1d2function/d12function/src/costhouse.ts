@@ -1,7 +1,4 @@
-import promptSync from "prompt-sync";
-const prompt = promptSync();
-
-function calculateHousepayment(costofhouse) {
+export function calcDownpayment(costofhouse: number) {
   let downPayment = 0;
   if (costofhouse == 0 && costofhouse < 50000) {
     downPayment = (costofhouse * 5) / 100;
@@ -13,7 +10,5 @@ function calculateHousepayment(costofhouse) {
     downPayment = 5000 + (10 / 100) * (costofhouse - 200000);
   }
 
-  console.log(downPayment);
+  return downPayment;
 }
-let costofhouse = prompt("enter cost of house");
-calculateHousepayment(costofhouse);

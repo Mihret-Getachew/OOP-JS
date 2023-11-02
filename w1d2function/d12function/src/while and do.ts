@@ -1,9 +1,9 @@
 // question 2a
-import promptSync from "prompt-sync";
-const prompt = promptSync();
+// import promptSync from "prompt-sync";
+// const prompt = promptSync();
 
 //while loop
-let age = Number(prompt("enter ur age"));
+export let age = Number(prompt("enter ur age"));
 while (age < 18) {
   age = Number(prompt("enter ur age"));
 }

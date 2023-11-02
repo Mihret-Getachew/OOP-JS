@@ -7,12 +7,7 @@
     "strict": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "*.ts",
-    "./src/*.ts",
-    "./test/*.ts",
-    "../../w1d3codequality/src/commision copy.ts"
-  ],
+  "include": ["*.ts", "./src/*.ts", "./test/*.ts"],
   "ts-node": {
     "esm": true // «———— enable ESM for ts-node
   }
