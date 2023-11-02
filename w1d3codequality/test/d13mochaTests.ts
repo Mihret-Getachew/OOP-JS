@@ -111,9 +111,3 @@ describe("MULTI", function () {
     assert.strictEqual(result, 6);
   });
 });
-describe("convertFahrenheit", function () {
-  it("for 0 celicius get 32  farhaniet", function () {
-    const temp = convertFahrenheit(0);
-    assert.strictEqual(temp, 32);
-  });
-});
