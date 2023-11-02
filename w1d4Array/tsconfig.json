@@ -11,7 +11,8 @@
     "*.ts",
     "./src/*.ts",
     "./test/*.ts",
-    "../../w1d3codequality/src/commision copy.ts"
+    "../../w1d3codequality/src/commision copy.ts",
+    "test/arrayTests.js"
   ],
   "ts-node": {
     "esm": true // «———— enable ESM for ts-node
