@@ -6,6 +6,7 @@ import { calcDownpayment } from "../src/costhouse.js";
 import { SUM } from "../src/sumdigit.js";
 import { MULTI } from "../src/multidigit.js";
 import { convertFahrenheit } from "../src/tempreture.js";
+import { calculateDistance } from "../src/distance.js";
 describe("isVowel", function () {
   it("a is vowel", function () {
     assert.equal(isVowel("a"), true);
@@ -109,5 +110,25 @@ describe("MULTI", function () {
   it("multiply 123 get 6 ", function () {
     const result = MULTI(123);
     assert.strictEqual(result, 6);
+  });
+});
+describe("convertFahrenheit", function () {
+  it("for 32 fahraniet get 0 celcius", function () {
+    const result = convertFahrenheit(32);
+    assert.strictEqual(result, 0);
+  });
+  it("for 0 fahraniet get -17.7778", function () {
+    const result = convertFahrenheit(0);
+    assert.strictEqual(+result.toFixed(2), -17.78);
+  });
+});
+describe("calculateDistance", function () {
+  it("get 0,0,5,5 result 7.07", function () {
+    const result = calculateDistance(0, 0, 5, 5);
+    assert.strictEqual(+result.toFixed(2), 7.07);
+  });
+  it("get 0,0,5,5 result 7.07", function () {
+    const result = calculateDistance(0, 0, -5, -5);
+    assert.strictEqual(+result.toFixed(2), 7.07);
   });
 });
