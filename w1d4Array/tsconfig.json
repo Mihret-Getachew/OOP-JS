@@ -5,15 +5,9 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "strict": true,
-    "allowSyntheticDefaultImports": true
+    "outDir": "./dist"
   },
-  "include": [
-    "*.ts",
-    "./src/*.ts",
-    "./test/*.ts",
-    "../../w1d3codequality/src/commision copy.ts",
-    "test/arrayTests.js"
-  ],
+  "include": ["*.ts", "./src/*.ts", "./test/*.ts"],
   "ts-node": {
     "esm": true // «———— enable ESM for ts-node
   }
