@@ -16,12 +16,14 @@
       mocha.setup("bdd");
       mocha.checkLeaks();
       assert = chai.assert;
+
+      console.log("Here");
     </script>
 
     <script src="dist/src/app.js" type="module"></script>
     <script src="dist/test/arrayTests.js" type="module"></script>
 
-    <script class="mocha-exec">
+    <script class="mocha-exec" type="module">
       mocha.run();
     </script>
   </body>

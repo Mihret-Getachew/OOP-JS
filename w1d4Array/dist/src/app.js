@@ -1,4 +1,3 @@
-console.log("in app.ts", "sum of [1,2,3] is: ", sum([1, 2, 3]));
 /**
  *
  * @param {number} aa is a number
@@ -7,18 +6,16 @@ console.log("in app.ts", "sum of [1,2,3] is: ", sum([1, 2, 3]));
  * @returns {number} largest of a, b, c
  */
 export function maxOfThree(aa, b, c) {
-    //IMPLEMENT THIS -- DO NOT USE MATH.MAX
-    let maxNumber;
-    if (aa >= b && aa >= c) {
-        maxNumber = aa;
-    }
-    else if (b >= aa && b >= c) {
-        maxNumber = b;
-    }
-    else {
-        maxNumber = c;
-    }
-    return maxNumber;
+  //IMPLEMENT THIS -- DO NOT USE MATH.MAX
+  let maxNumber;
+  if (aa >= b && aa >= c) {
+    maxNumber = aa;
+  } else if (b >= aa && b >= c) {
+    maxNumber = b;
+  } else {
+    maxNumber = c;
+  }
+  return maxNumber;
 }
 /**
  *
@@ -26,12 +23,12 @@ export function maxOfThree(aa, b, c) {
  * @returns {number} sum of arr numbers
  */
 export function sum(arr) {
-    //IMPLEMENT THIS
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum = sum + arr[i];
-    }
-    return sum;
+  //IMPLEMENT THIS
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
 }
 /**
  *
@@ -39,12 +36,12 @@ export function sum(arr) {
  * @returns {number} sum of arr numbers
  */
 export function multiply(arr) {
-    //IMPLEMENT THIS
-    let product = 1;
-    for (let i = 0; i < arr.length; i++) {
-        product = product * arr[i];
-    }
-    return product;
+  //IMPLEMENT THIS
+  let product = 1;
+  for (let i = 0; i < arr.length; i++) {
+    product = product * arr[i];
+  }
+  return product;
 }
 /* findLongestWord */
 /**
@@ -53,14 +50,14 @@ export function multiply(arr) {
  * @returns {number} length of longest word
  */
 export function findLongestWord(arr) {
-    //IMPLEMENT THIS
-    let maxLength = arr[0].length;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > maxLength) {
-            maxLength = arr[i].length;
-        }
+  //IMPLEMENT THIS
+  let maxLength = arr[0].length;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > maxLength) {
+      maxLength = arr[i].length;
     }
-    return maxLength;
+  }
+  return maxLength;
 }
 /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows:
 describe("generate array", function () {
@@ -75,17 +72,17 @@ describe("generate array", function () {
  * @returns {Array} 2d array with entries i + j
  */
 export function generateArray(rows, cols) {
-    //IMPLEMENT THIS
-    let result = [];
-    let currentNumber = 1;
-    for (let i = 0; i < rows; i++) {
-        let currentArray = [];
-        for (let j = 0; j < cols; j++) {
-            currentArray.push(currentNumber++);
-        }
-        result.push(currentArray);
+  //IMPLEMENT THIS
+  let result = [];
+  let currentNumber = 1;
+  for (let i = 0; i < rows; i++) {
+    let currentArray = [];
+    for (let j = 0; j < cols; j++) {
+      currentArray.push(currentNumber++);
     }
-    return result;
+    result.push(currentArray);
+  }
+  return result;
 }
 /**
  *
@@ -94,17 +91,17 @@ export function generateArray(rows, cols) {
  * @returns {Array} checked answers
  */
 export function scoreExams(studentAnswers, correctAnswers) {
-    let results = [];
-    for (let i = 0; i < studentAnswers.length; i++) {
-        let correctAnswersCount = 0;
-        for (let j = 0; j < correctAnswers.length; j++) {
-            if (studentAnswers[i][j] === correctAnswers[j]) {
-                correctAnswersCount++;
-            }
-        }
-        results.push(correctAnswersCount);
+  let results = [];
+  for (let i = 0; i < studentAnswers.length; i++) {
+    let correctAnswersCount = 0;
+    for (let j = 0; j < correctAnswers.length; j++) {
+      if (studentAnswers[i][j] === correctAnswers[j]) {
+        correctAnswersCount++;
+      }
     }
-    return results;
+    results.push(correctAnswersCount);
+  }
+  return results;
 }
 /**
  *
@@ -112,11 +109,11 @@ export function scoreExams(studentAnswers, correctAnswers) {
  * @returns {Array} list of reversed number
  */
 export function reverse(arr) {
-    let result = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        result.push(arr[i]);
-    }
-    return result;
+  let result = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    result.push(arr[i]);
+  }
+  return result;
 }
 /**
  *
@@ -124,16 +121,16 @@ export function reverse(arr) {
  * @returns {Array} list of reversed number
  */
 export function reverseArrayInPlace(arr) {
-    let left = 0;
-    let right = arr.length - 1;
-    while (left < right) {
-        let temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = temp;
-        left++;
-        right--;
-    }
-    return arr;
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+    left++;
+    right--;
+  }
+  return arr;
 }
 // let arr = ["i", "m", "n"];
 // function arrayFun(arr: string[]): number {
