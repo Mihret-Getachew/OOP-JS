@@ -10,9 +10,9 @@ export function maxOfThree(aa: number, b: number, c: number): number {
   //IMPLEMENT THIS -- DO NOT USE MATH.MAX
   let maxNumber;
 
-  if (aa > b && aa > c) {
+  if (aa >= b && aa >= c) {
     maxNumber = aa;
-  } else if (b > aa && b > c) {
+  } else if (b >= aa && b >= c) {
     maxNumber = b;
   } else {
     maxNumber = c;
@@ -157,3 +157,14 @@ export function reverseArrayInPlace(arr: Array<number>): Array<number> {
   }
   return arr;
 }
+// let arr = ["i", "m", "n"];
+
+// function arrayFun(arr: string[]): number {
+//   let count = 0;
+//   for (let elem of arr) {
+//     console.log(elem);
+//     count++;
+//   }
+//   return count;
+// }
+// console.log(arrayFun(arr));

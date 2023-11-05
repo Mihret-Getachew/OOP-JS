@@ -2,33 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Arrays lab</title>
-    <link rel="shortcut icon" type="image/jpg" href="./sd415favicon.webp" />
-    <!-- download style info to make the page look nice -->
+    <title>Mocha Tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
   </head>
-
   <body>
     <div id="mocha"></div>
-    <!-- placeholder used by mocha to insert test results on page-->
 
-    <!-- download mocha and chai libraries -->
     <script src="https://unpkg.com/chai/chai.js"></script>
     <script src="https://unpkg.com/mocha/mocha.js"></script>
 
-    <!-- some setup code -->
     <script class="mocha-init">
       mocha.setup("bdd");
       mocha.checkLeaks();
-      let assert = chai.assert;
+      assert = chai.assert;
     </script>
 
-    <!-- put links to your code and tests here -->
-    <!-- <script src="arrays.js" type="module"></script> -->
-    <script src="./dist/test/arrayTests.js" type="module"></script>
+    <script src="dist/src/app.js" type="module"></script>
+    <script src="dist/test/arrayTests.js" type="module"></script>
 
-    <script class="mocha-exec" type="module">
+    <script class="mocha-exec">
       mocha.run();
     </script>
   </body>

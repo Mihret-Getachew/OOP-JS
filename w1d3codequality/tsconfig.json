@@ -5,7 +5,8 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "strict": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist"
   },
   "include": ["*.ts", "./src/*.ts", "./test/*.ts"],
   "ts-node": {

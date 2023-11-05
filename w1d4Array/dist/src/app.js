@@ -7,7 +7,18 @@ console.log("in app.ts", "sum of [1,2,3] is: ", sum([1, 2, 3]));
  * @returns {number} largest of a, b, c
  */
 export function maxOfThree(aa, b, c) {
-    return 0; //IMPLEMENT THIS -- DO NOT USE MATH.MAX
+    //IMPLEMENT THIS -- DO NOT USE MATH.MAX
+    let maxNumber;
+    if (aa >= b && aa >= c) {
+        maxNumber = aa;
+    }
+    else if (b >= aa && b >= c) {
+        maxNumber = b;
+    }
+    else {
+        maxNumber = c;
+    }
+    return maxNumber;
 }
 /**
  *
@@ -16,7 +27,11 @@ export function maxOfThree(aa, b, c) {
  */
 export function sum(arr) {
     //IMPLEMENT THIS
-    return 0;
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
 }
 /**
  *
@@ -25,7 +40,11 @@ export function sum(arr) {
  */
 export function multiply(arr) {
     //IMPLEMENT THIS
-    return 0;
+    let product = 1;
+    for (let i = 0; i < arr.length; i++) {
+        product = product * arr[i];
+    }
+    return product;
 }
 /* findLongestWord */
 /**
@@ -35,7 +54,13 @@ export function multiply(arr) {
  */
 export function findLongestWord(arr) {
     //IMPLEMENT THIS
-    return 0;
+    let maxLength = arr[0].length;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > maxLength) {
+            maxLength = arr[i].length;
+        }
+    }
+    return maxLength;
 }
 /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows:
 describe("generate array", function () {
@@ -51,5 +76,72 @@ describe("generate array", function () {
  */
 export function generateArray(rows, cols) {
     //IMPLEMENT THIS
-    return [[0]];
+    let result = [];
+    let currentNumber = 1;
+    for (let i = 0; i < rows; i++) {
+        let currentArray = [];
+        for (let j = 0; j < cols; j++) {
+            currentArray.push(currentNumber++);
+        }
+        result.push(currentArray);
+    }
+    return result;
 }
+/**
+ *
+ * @param {*} studentAnswers student answers
+ * @param {*} correctAnswers correct answers
+ * @returns {Array} checked answers
+ */
+export function scoreExams(studentAnswers, correctAnswers) {
+    let results = [];
+    for (let i = 0; i < studentAnswers.length; i++) {
+        let correctAnswersCount = 0;
+        for (let j = 0; j < correctAnswers.length; j++) {
+            if (studentAnswers[i][j] === correctAnswers[j]) {
+                correctAnswersCount++;
+            }
+        }
+        results.push(correctAnswersCount);
+    }
+    return results;
+}
+/**
+ *
+ * @param {*} arr given list of numbers
+ * @returns {Array} list of reversed number
+ */
+export function reverse(arr) {
+    let result = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        result.push(arr[i]);
+    }
+    return result;
+}
+/**
+ *
+ * @param {*} arr given list of numbers
+ * @returns {Array} list of reversed number
+ */
+export function reverseArrayInPlace(arr) {
+    let left = 0;
+    let right = arr.length - 1;
+    while (left < right) {
+        let temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+        left++;
+        right--;
+    }
+    return arr;
+}
+// let arr = ["i", "m", "n"];
+// function arrayFun(arr: string[]): number {
+//   let count = 0;
+//   for (let elem of arr) {
+//     console.log(elem);
+//     count++;
+//   }
+//   return count;
+// }
+// console.log(arrayFun(arr));
