@@ -44,9 +44,9 @@ describe("myMap", function () {
     Then write it using an arrow expression. */
 describe("myMap", function () {
   const testArray = [-10, 0, 10, 20];
-  it("tests myMap on triples anonymous function", function () {
+  it("tests myMap on triples anonyme43ous function", function () {
     assert.deepStrictEqual(
-      myMap(testArray, function (elem: any) {
+      myMap(testArray, function (elem: number) {
         let x = elem * 3;
         return x;
       }),
@@ -55,8 +55,8 @@ describe("myMap", function () {
   });
   it("tests myMap on triples arrow function", function () {
     assert.deepStrictEqual(
-      myMap(testArray, (elem: any) => {
-        let x = elem * 3;
+      myMap(testArray, (num: number) => {
+        let x = num * 3;
         return x;
       }),
       [-30, 0, 30, 60]

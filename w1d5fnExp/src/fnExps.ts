@@ -7,11 +7,11 @@ export function times100(num: number): number {
   return x;
 }
 
-export function myMap(arr: any[any], func: Function): any[any] {
+export function myMap(arr: any[], fun: (num: number) => number): any[any] {
   let newArr = [];
 
   for (let elem of arr) {
-    newArr.push(func(elem));
+    newArr.push(fun(elem));
   }
 
   return newArr;
