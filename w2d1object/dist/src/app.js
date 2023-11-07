@@ -1,3 +1,4 @@
+export {};
 // type Student = {
 //   studentId: number;
 //   quizAnswer: number[];
